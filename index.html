@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Infinite Programmer" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Welcome Infinte Programmer</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="bookmarks">
+        <ul>
+          <li class="gm"><a href="#" class="G-mail">G-mail</a></li>
+          <li class="yt"><a href="#" class="Youtube">Youtube</a></li>
+          <li class="ligpt"><a href="#" class="gpt">GPT 3</a></li>
+          <li class="spotif"><a href="#" class="spotify">Spotify</a></li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="search">
+          <input
+            type="text"
+            id="searchbar"
+            placeholder="Hey Infiy Enter your Query :D"
+            class="srch_pan"
+            min="2"
+            required
+          />
+          <input type="submit" value="Search" class="srch" onclick="search()"/>
+        </div>
+        <div class="social">
+          <img src="/Images/temp.png" alt="Instagram" />
+          <img src="/Images/temp.png" alt="Youtube" />
+          <img src="/Images/temp.png" alt="Facebook" />
+          <img src="/Images/temp.png" alt="X" />
+          <img src="/Images/temp.png" alt="LikenId" />
+          <img src="/Images/temp.png" alt="Discord" />
+          <img src="/Images/temp.png" alt="Github" />
+        </div>
+      </div>
+      <div class="box">
+        <ol>
+          <span class="items">
+            <img src="/Images/temp.png" alt="" />
+            <a href="#">Google</a>
+          </span>
+          <span class="items">
+            <img src="/Images/temp.png" alt="" />
+            <a href="#">Google</a>
+          </span>
+          <span class="items">
+            <img src="/Images/temp.png" alt="" />
+            <a href="#">Google</a>
+          </span>
+          <span class="items">
+            <img src="/Images/temp.png" alt="" />
+            <a href="#">Google</a>
+          </span>
+          <span class="items">
+            <img src="/Images/temp.png" alt="" />
+            <a href="#">Google</a>
+          </span>
+          <span class="items">
+            <img src="/Images/temp.png" alt="" />
+            <a href="#">Google</a>
+          </span>
+        </ol>
+      </div>
+    </div>
+    <script>
+      // Function to handle search
+      function search() {
+        var query = document.getElementById('searchbar').value;
+        // Redirect to Google search with the query
+        window.location.href = 'https://www.google.com/search?q=' + encodeURIComponent(query);
+      }
+
+      // Function to handle keypress event
+      function handleKeyPress(event) {
+        if (event.key === 'Enter') {
+          search();
+        }
+      }
+
+      // Add event listener for keypress event
+      document.getElementById('searchbar').addEventListener('keypress', handleKeyPress);
+    </script>
+  </body>
+</html>
